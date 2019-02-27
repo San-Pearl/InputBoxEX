@@ -6,3 +6,15 @@ Expanded InputBox
 
 If you press the "OK" button without entering characters in the input box using the standard InputBox, you can not know whether the "Cancel" button was pressed or the "OK" button was pressed.
 I created an InputBox that inherits the FORM and can retrieve the entered letters and pressed buttons.
+
+
+USAGE
+
+Dim InpBox As New InputBoxEX("InputBoxEX", "Input word", True, 220, 150)
+Dim Res As Integer = InpBox.ShowDialog
+Dim Mes As String = InpBox.InputTxt
+If Res = DialogResult.OK Then
+    MsgBox("Press OK & Input Word is " & Mes)
+ElseIf Res = DialogResult.Cancel Then
+    MsgBox("Press Cancel & Input Word is " & mes)
+End If
